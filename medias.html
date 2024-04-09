@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All My Socials</title>
     <style>
+        .button-container {
+            margin-top: 20px;
+        }
+                fluent-button {
+            font-size: 24px;
+            padding: 12px 24px;
+            background-color: #FFFFFF;
+            color: #0078d4;
+            border: none;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        fluent-button:hover {
+            background-color: #b9b9b9;
+        }
         body {
             font-family: Segoe UI, Arial, sans-serif;
             background-color: #f0f0f0;
@@ -44,6 +59,11 @@
     </style>
 </head>
 <body>
+    <div class="button-container">
+        <a href="destination.html" style="text-decoration: none;">
+            <fluent-button>Go back!</fluent-button>
+        </a>
+    </div>
     <div class="container">
         <h1>All My Socials</h1>
         <p>Find me on various social media platforms:</p>
