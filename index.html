@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="icon" href="image.png" type="image/png"> <!-- Replace "icon.png" with the path to your icon file -->
-  <head>
-    <title>click me please</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image.png" type="image/png"> <!-- Replace "image.png" with the path to your icon file -->
+    <title>Click Me</title>
     <style>
-      .button-container {
-        display: flex;
-        justify-content: center;
-      }
-
-      fluent-button {
-        font-size: 40px; /* Adjust the font size to make the button bigger */
-        padding: 20px 40px; /* Adjust padding to increase the button's size */
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #008080; /* Teal background color */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        fluent-button {
+            font-size: 24px;
+            padding: 12px 24px;
+            background-color: #c0c0c0; /* Light gray button color */
+            color: #000000; /* Black button text color */
+            border: 2px solid #000000; /* Black border */
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
+        fluent-button:hover {
+            background-color: #ffffff; /* White button background on hover */
+            color: #000000; /* Black button text color on hover */
+        }
+        a {
+            text-decoration: none; /* Remove underline from links */
+        }
     </style>
-    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-  </head>
-  <body>
+</head>
+<body>
     <div class="button-container">
-      <a href="destination.html">
-        <fluent-button>Click me to learn more about "sshonkk"</fluent-button>
-      </a>
+        <a href="destination.html">
+            <fluent-button>Click me to learn more about "sshonkk"</fluent-button>
+        </a>
     </div>
-  </body>
+</body>
 </html>
