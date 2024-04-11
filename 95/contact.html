@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT.exe</title>
+    <style>
+        body {
+            font-family: 'MS Sans Serif', Geneva, sans-serif;
+            background-color: #008080;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+        }
+        #title-bar {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 5px;
+            height: 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ffffff;
+        }
+        #title-bar .title {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #title-bar .buttons {
+            display: inline-block;
+            float: right;
+            margin-right: 10px;
+        }
+        .button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff0000;
+        }
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="title-bar">
+        <div class="title">CONTACT.exe</div>
+        <div class="buttons">
+            <div class="button" id="minimize">&#x2500;</div>
+            <div class="button" id="maximize">&#x2610;</div>
+            <div class="button" id="close">&#x2716;</div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="destination.html" style="text-decoration: none;">
+            <fluent-button>Go back!</fluent-button>
+        </a>
+    </div>
+    <div class="container">
+        <h1>Contact Me!</h1>
+        <p>Feel free to reach out via email:</p>
+        <a href="mailto:sshonkk.contact@gmail.com">sshonkk.contact@gmail.com</a>
+    </div>
+
+    <script>
+        document.getElementById("minimize").addEventListener("click", function() {
+            window.innerWidth = 100;
+            window.innerHeight = 100;
+            window.screenX = window.outerWidth - 100;
+            window.screenY = window.outerHeight - 100;
+        });
+
+        document.getElementById("maximize").addEventListener("click", function() {
+            if (window.innerWidth < screen.width) {
+                window.innerWidth = screen.width;
+                window.innerHeight = screen.height;
+                window.screenX = 0;
+                window.screenY = 0;
+            } else {
+                window.innerWidth = 800;
+                window.innerHeight = 600;
+                window.screenX = (screen.width - 800) / 2;
+                window.screenY = (screen.height - 600) / 2;
+            }
+        });
+
+        document.getElementById("close").addEventListener("click", function() {
+            window.close();
+        });
+    </script>
+</body>
+</html>
