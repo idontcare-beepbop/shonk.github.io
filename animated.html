@@ -3,60 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Page</title>
+    <title>Spooky Website</title>
     <style>
-        body, html {
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
         }
-
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+        .spooky-img {
+            width: 300px;
+            margin: 50px auto;
         }
-
-        .button-container {
-            position: absolute;
-            top: 20px; /* Adjust the distance from the top */
-            left: 50%;
-            transform: translateX(-50%);
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
         }
-
-        .go-back-button {
-            font-size: 24px;
-            padding: 10px 20px;
-            background-color: #0078d4;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
         }
-
-        .go-back-button:hover {
-            background-color: #005a9e;
+        .hidden {
+            display: none;
         }
     </style>
-</head>
-<body>
-    <video id="video-background" autoplay loop muted>
-        <source src="vid.mp4" type="video/mp4"> <!-- Replace "your-video.mp4" with the path to your MP4 video -->
-    </video>
-
-    <div class="button-container">
-        <button class="go-back-button" onclick="goBack()">Go Back</button>
-    </div>
-
     <script>
-        function goBack() {
-            window.history.back();
+        // Function to reveal a hidden element
+        function reveal(id) {
+            document.getElementById(id).classList.remove('hidden');
         }
     </script>
+</head>
+<body>
+    <h1>W̴͖̉͂͋è̷͚l̴̞̲̞̓͘c̷̤͈̀̋ͅọ̵̼͉̕m̶̡̭̗͗̐̒ę̷̳̰̍ ̴̹̌t̵̮̓̓͜o̸̮̮̦͋̓ ̵̭̖͑̌m̵̢̗͚̽͝ẏ̴̘͂͘ ̷̢̗̿̾̾s̵͓̫̑̐̓c̴͚̳̊̅͗r̴̤͔̃a̷̢͓̟̽͊p̶͕̣̑̚p̸̨̛̜͝è̶̡̤͋d̶̥͈̐̀͠ ̶̜̿̔͊s̷̺̥̤̾̈́̎i̴̮̓́͠t̵͎̭̜͆̈e̸̝̦̽!̵̡̋͠</h1>
+    <img src="https://i.imgur.com/UzgV8J2.jpg" alt="Creepy Image" class="spooky-img">
+    <p>ERROR 404<br>SITE NOT FOUND</p>
+    <a href="next.html"><button onclick="openFullscreen();">f̶̰̺͇̞̰͇͖̺͋͋̆͛̇͑v̶͙̜͐͆̏g̷̡̛͖̬̭̗̤̱̎̆͑̉̊̀̃̾͠f̸̛̛̝̬͍͚͙̃̑̃̂͂̃̇̅̅ḩ̷̡͕̺̙͓͓̝̖̬̹̰̹̹̂͆́̾̈́̒͑̀̀͜ǰ̴̼̳̖̹̊̋͆̄̅̃͝é̷̖͖̼̦̺͇̱̰͎̳̇̃͑̈͐̂̉́̃͘̕s̵̨͖̫̼̜͇̪̬̯̖͍̤̾͂̽͊̾̍̽̈́̓̚͜j̶̢̯̰͓͙̣͍͇̻̳̹͉̃̃́̏̒́g̸̢͉͚͙̦̱̫͐̐͊̑̍̓̀̿̅̿͑͆̕d̷̳̖̫̤͔͕̤̀̈́͛̃͂̌͐̎͐̂v̴̠͋̽̾͋̔̂́͆̂f̸̢̛̛̛̗̫͖̝͇̬͍͇̬́̿̉̈́̐͒̚g̴͓̝͇̻͈̗̋̍͂̍͛̄̑h̷̘͕̥̼̲̊̅͐̏̑̑̃͛̾̊̀̇̕̚͝ç̵͓̠̰͎̈͘͝h̶̙̭̤̬̞̟̻̋͒̏͐͗̚g̷͉̯͉̱̖͍͇̥͎͐̿̀͌̍́̐̔͋̅̏́̑̕s̵̢͔͍̯̰̗̰̖̞̳̄̒̃͛̅͊̎̕͠h̸̤̪͎̍̔͌͑̈́̐̆̐͜͝f̷̱̗̞̤̼̤̘͍̩͖̩͇̦͈̂̓̊͛͑́̐̀̈́͂͋̽́͊͠ć̴̛̗̜̏̈́͗̅̀͌͐͠ḛ̶̡͖̮̱̮̦̝͎͆͐ÿ̸͓́̆͛̋̽̍͋̽̃͠͠t̸̛̖͙̗̼͎̲͔́̀̊͆́̓̇̕͝ͅr̸̡͚͍͉͉̦̠̩̜̗̮̘͚̝̓ͅs̸͖̤̞̥͐̏͋̌͋̃̂̎͗d̸̡̢͔͕̣̥̂͛͒͗͂̓̚͠ṋ̶͈̺̺̹̊̓̌͌͐̓̽̅͗̍͒͐͘͝ͅd̶̞̤̟͖̗͚̞̻̪͗̆͐̏m̵̡̜̪̪̙̜͓̩̹̞̹̜̎́̑̌̃̍̈́̑͝͠ͅb̸̧͎̰̯͓̙̯͔͙̟̻̦̳̳̾͐̀͛̿̓̅͝ë̵͙̘̖̤́ġ̸̲̭̈̽̉͑̋͠c̷̖̬͖̻̹͙̹̀̄̍̆̄̔͌͑̈̑̚͝f̷̡̱̩̯͉͉͒̿̌̍͗̏͋̓h̵̠͂̂̅̈̓͑̓̕ṡ̸̤̗͎̳̏̿͛̍́j̶̬͙͍̥͐̈́̄̀͗b̷̨̢̤̮̲̯̺̬̠̥̂͗͋j̶͚̬͓͓̤̜̘̣̘̊̍͗̀̌̆̈́͑̏͋a̵̛̺̓̅͐́͗̍͂̀͛̌g̷̡͇̖̳̥̬̝̤̘̗̝̗̱̅̌d̸̡̬̦͊̂͒͂͊̎̏͘͜b̶̲̗̞̬̩̖͙̳̞͉̫́̊̽̎̑̆̾̕g̶̛̰̺͇̼̏̇͌͐̀̄̉̐̂̈́̎̚͘͠ȩ̸̛̘̣̰̜͕̞͖̣͇̦͓̻̝̍́̐̑̂͜s̷̡̳̾̏̆y̴̛̦̜̟̖̱̠̣̥̳͈̗̝͋̌̈́̈͐̇̆́̈̏̒͘͠ų̶̩̝̣̥̼̱̰̜̘̗̩͕͎̐̆͛͘ͅḋ̴͎̬̀͆̿̔̏͋͆͗̈̓̕͘</button></a>
 </body>
 </html>
