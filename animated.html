@@ -3,16 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Animated Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 20px; /* Adjust the distance from the top */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .go-back-button {
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #0078d4;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .go-back-button:hover {
+            background-color: #005a9e;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Me!</h1>
-        <p>Feel free to reach out via email:</p>
-        <a href="mailto:myemail@example.com">myemail@example.com</a>
+    <video id="video-background" autoplay loop muted>
+        <source src="vid.mp4" type="video/mp4"> <!-- Replace "your-video.mp4" with the path to your MP4 video -->
+    </video>
+
+    <div class="button-container">
+        <button class="go-back-button" onclick="goBack()">Go Back</button>
     </div>
-    <a href="destination.html" style="position: fixed; bottom: 20px; right: 20px; background-color: transparent; border: none;">
-        <fluent-icon icon="back" style="width: 30px; height: 30px; fill: #0078d4;"></fluent-icon>
-    </a>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
