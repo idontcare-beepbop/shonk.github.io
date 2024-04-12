@@ -18,10 +18,10 @@
             height: 100vh;
         }
         .button-container {
-            display: flex;
+            margin-top: 20px;
         }
-        fluent-button {
-            font-size: 44px;
+                fluent-button {
+            font-size: 24px;
             padding: 12px 24px;
             background-color: #FFFFFF;
             color: #0078d4;
@@ -33,20 +33,22 @@
             background-color: #b9b9b9;
         }
         a {
-            font-size: 40px;
+            display: block;
+            font-size: 18px;
             color: #0078d4;
             text-decoration: none;
-            margin-top: 10px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
         }
         a:hover {
-            text-decoration: none;
+            color: #004578;
         }
     </style>
-    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    
 </head>
 <body>
     <div class="button-container">
-        <a href="destination.html">
+        <a href="destination.html" style="text-decoration: none;">
             <fluent-button>Go back!</fluent-button>
         </a>
     </div>
