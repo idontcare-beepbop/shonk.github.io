@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Redirect to load.html after the transition
         setTimeout(function () {
-            window.location.href = "load.html";
+            window.location.href = "error.html";
         }, 1000); // 0.5s transition duration
     }, 6000); // Adjust the time as needed
 });
