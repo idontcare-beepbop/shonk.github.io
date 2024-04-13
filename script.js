@@ -7,19 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // Fade out the body
         document.body.style.opacity = 0;
 
-        // Redirect to load.html after the transition
+        // Redirect to error.html after the transition
         setTimeout(function () {
             window.location.href = "error.html";
-        }, 800); // 0.5s transition duration
+        }, 800); // 0.8s transition duration
     }, 3000); // Adjust the time as needed
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Your existing JavaScript code here
-    // ...
     
     // Full screen mode functionality
     const fullscreenBtn = document.getElementById('fullscreen-btn');
