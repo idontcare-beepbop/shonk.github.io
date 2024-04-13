@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             window.location.href = "error.html";
         }, 800); // 0.8s transition duration
-    }, 3000); // Adjust the time as needed
+    }, 9000); // Adjust the time as needed
     
     // Full screen mode functionality
     const fullscreenBtn = document.getElementById('fullscreen-btn');
